@@ -10,7 +10,7 @@
 }
 
 .block_size {
-  width: var(--block-size);
+  inline-size: var(--block-size);
 }
 
 .main {
@@ -22,7 +22,6 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  background-color: #fff;
 }
 
 .header {
@@ -50,6 +49,7 @@
 .card {
   border: 2px solid var(--accent-color, #000);
   padding-bottom: 23px;
+  background-color: #fff;
   inline-size: 100%;
 }
 
@@ -93,7 +93,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  /* opacity: 0.5; убрал для лучшей читаемости текста*/
+  opacity: 0.5;
   color: var(--label-text-color, #000);
   font-family: var(--accent-font-family, sans-serif);
   font-size: 0.875rem;
@@ -167,7 +167,7 @@
   gap: 4px;
 }
 
-.card__icon-button {
+.card__icon-button { /* Это основной селектор */
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
@@ -191,7 +191,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin-bottom: 100px;
+  margin-block-end: 100px;
   padding: 15px 18px;
 }
 
@@ -304,31 +304,31 @@
   text-transform: uppercase;
 }
 
-.img-first-sprint-start {
+.filter-hue-rotate {
   filter: hue-rotate(20deg);
 }
 
-.img-first-sprint-finish {
+.filter-drop-shadow {
   filter: drop-shadow(12px 12px 16px blue);
 }
 
-.img-second-sprint-start {
+.filter-contrast {
   filter: contrast(190%);
 }
 
-.img-second-sprint-finish {
+.filter-brightness {
   filter: brightness(1.5);
 }
 
-.img-third-sprint-start {
+.filter-saturate {
   filter: saturate(30%);
 }
 
-.img-third-sprint-finish {
+.filter-sepia-brightness {
   filter: sepia(60%) brightness(1.5);
 }
 
-.img-fourth-sprint {
+.filter-blur {
   filter: blur(1px);
 }
 
